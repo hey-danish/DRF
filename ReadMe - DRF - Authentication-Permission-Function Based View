@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=sg-nb04h_pY&list=PLbGui_ZYuhijTKyrlu-0g5GcP9nUp_HlN&index=21
+Time Slice: 7:46
+
+@api_view(['GET','POST','PUT','DELETE','PATCH'])
+@authentication_classes([BasicAuthentication])
+@permission_classes(['IsAuthenticated'])

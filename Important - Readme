@@ -1,0 +1,12 @@
+# Create JWT Token in AUTH TOKEN module
+sudo python3 manage.py drf_create_token superuser
+
+#Obtain Token JWT
+http POST http://localhost:8000/gettoken/ username='superuser' password='2212'
+
+#Provide JWT for Authentication in GET Route
+http http://localhost:8000/drf/student/ 'Authorization:Token 62e8ffadd0095d55e73da28c1a34df6a9eb87e41'
+
+#Provide JWT for Authentication in POST Route
+http -f POST http://localhost:8000/drf/student/ name=John city=1 roll=100 'Authorization:Token
+62e8ffadd0095d55e73da28c1a34df6a9eb87e41'
