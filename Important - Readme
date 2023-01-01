@@ -10,3 +10,8 @@ http http://localhost:8000/drf/student/ 'Authorization:Token 62e8ffadd0095d55e73
 #Provide JWT for Authentication in POST Route
 http -f POST http://localhost:8000/drf/student/ name=John city=1 roll=100 'Authorization:Token
 62e8ffadd0095d55e73da28c1a34df6a9eb87e41'
+
+# Docker instructions
+1. sudo docker build -t drf_app:v1.0 . # Build Your App Base Image
+2. sudo docker image tag 452845f9d735 drf_app:v1.0 # Tag your Image After Build Completes
+3. sudo docker run -d -p 8000:8000 --name drf_app_container drf_app:v1.0 #Run Container
